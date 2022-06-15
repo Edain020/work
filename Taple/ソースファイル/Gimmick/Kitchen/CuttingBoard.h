@@ -1,0 +1,46 @@
+//=============================================
+//							CuttingBoard.h
+//	–{ŠÖ˜A
+//@§ìÒ:AT12D171 No.29 ¼–{aŒá
+//
+//````````XV—š—ğ``````````
+// 2020/11/** §ìŠJn
+//		12/11  ‚Ü‚È”Â
+//``````````````````````
+
+// ƒCƒ“ƒNƒ‹[ƒhƒK[ƒh
+#pragma once
+
+
+//===== ƒCƒ“ƒNƒ‹[ƒh•” =====
+#include "../Gimmick.h"
+
+
+//===== ’è”Eƒ}ƒNƒ’è‹` =====
+#define CUTTINGBOARD_SIZE_X (15)
+#define CUTTINGBOARD_SIZE_Y (1)
+#define CUTTINGBOARD_SIZE_Z (1)
+
+
+
+class CuttingBoard :public Gimmick // ‘äƒNƒ‰ƒX
+{
+public:
+	CuttingBoard(void) {}
+	virtual ~CuttingBoard(void);
+
+	virtual bool Init(void);
+	virtual void Uninit(void);
+	virtual void Draw(void);
+
+	virtual bool isClimb(void) { return true; }
+
+private:
+	static Model *m_pModel;
+
+protected:
+};
+
+
+
+
